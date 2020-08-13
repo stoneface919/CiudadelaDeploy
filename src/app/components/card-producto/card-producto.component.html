@@ -1,0 +1,56 @@
+<ion-card>
+  <ion-slides mode="md" buttom="true" pager="md"  >
+    <ion-slide >
+      <ion-img src="../../../assets/img/pc-gamer.png"></ion-img>
+    </ion-slide>
+  </ion-slides>
+  <ion-card-header>
+    <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+    <ion-card-title> {{visitado.nombreProducto}} </ion-card-title>
+  </ion-card-header>
+  <ion-card-header>
+    <ion-card-subtitle color="primary">Meses sin intereses</ion-card-subtitle>
+    <ion-card-title color="success">$ {{visitado.precio}} </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-list-header>
+        <ion-label color="success">
+          Disponible
+        </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Cantidad</ion-label>
+        <ion-select value="" okText="Okay" cancelText="Cancelar">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    </ion-list>
+    <ion-list-header>
+      <ion-label>Descripción</ion-label>
+    </ion-list-header>
+    {{visitado.descripcion}}
+    <ion-list-header>
+      <ion-label>Caracteristicas</ion-label>
+    </ion-list-header>
+    {{visitado.caracteristicas}}
+  </ion-card-content>
+  <ion-card-header>
+    <ion-card-subtitle>Valoraciones</ion-card-subtitle>
+    <ion-card-title><ion-icon name="star"></ion-icon> {{visitado.calificaciones}} </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list-header>
+      <ion-label>Reseñas</ion-label>
+    </ion-list-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Reseña 1</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

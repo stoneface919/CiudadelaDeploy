@@ -1,0 +1,15 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{titulo}}</ion-title>
+    <ion-buttons slot="end" routerLink="/carrito">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar routerLink="/buscar" showCancelButton="never" placeholder="Busca en Ciudadela">
+  </ion-searchbar>
+</ion-header>

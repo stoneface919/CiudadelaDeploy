@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <form (ngSubmit)="registro( fRegistro )" #fRegistro="ngForm">
+      <ion-card>
+        <ion-list-header>
+          <ion-label color="primary">Información personal</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input name="nombre" [(ngModel)]="registerUser.nombre" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Apellidos</ion-label>
+          <ion-input name="apellidos" [(ngModel)]="registerUser.apellidos" type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo electronico</ion-label>
+          <ion-input name="email" [(ngModel)]="registerUser.email" type="email" ></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input name="password" [(ngModel)]="registerUser.password" type="password" ></ion-input>
+        </ion-item>    
+        <ion-item>
+          <ion-label position="floating">Fecha de nacimiento</ion-label>
+          <ion-datetime name="edad"  [(ngModel)]="registerUser.edad" displayFormat="MM DD YY" max="3000-08-23" ></ion-datetime>
+        </ion-item>
+        <ion-list-header>
+          <ion-label color="primary">Ubicación</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label position="floating">calle</ion-label>
+          <ion-input name="calle" [(ngModel)]="registerUser.calle" type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">colonia</ion-label>
+          <ion-input name="colonia" [(ngModel)]="registerUser.colonia" type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="NoInterior" [(ngModel)]="registerUser.NoInterior" type="number" placeholder="Numero Exterior"></ion-input>
+          <ion-input name="NoInterior" [(ngModel)]="registerUser.NoInterior" type="number" placeholder="Numero Exterior"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Codigo postal</ion-label>
+          <ion-input name="codigoPostal" [(ngModel)]="registerUser.codigoPostal" type="number" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Municipio</ion-label>
+          <ion-input name="municipio" [(ngModel)]="registerUser.municipio" type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Estado</ion-label>
+          <ion-input name="estado" [(ngModel)]="registerUser.estado" type="text" ></ion-input>
+        </ion-item>
+        <ion-button type="submit" expand="block" fill="outline">Crear cuenta</ion-button>
+      </ion-card>
+  </form>
+  </ion-list>
+
+</ion-content>

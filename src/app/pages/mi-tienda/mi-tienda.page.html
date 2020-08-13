@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button color="primary"></ion-menu-button>
+          </ion-buttons>
+        <ion-title>Mi tienda </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card *ngIf="VerificarTienda">
+      <form (ngSubmit)="crearTienda( fTienda )" #fTienda="ngForm">
+        <ion-list-header>
+            <ion-label  color="primary">Información Principal</ion-label>
+          </ion-list-header>
+          <ion-list>
+              <ion-item>
+                <ion-label position="floating">Nombre de tu tienda</ion-label>
+                <ion-input name="nombreTienda" [(ngModel)]="tienda.nombreTienda" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Descripción</ion-label>
+                <ion-textarea name="descripcion" [(ngModel)]="tienda.descripcion" required></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Etiquetas</ion-label>
+                <ion-input name="etiquetas" [(ngModel)]="tienda.etiquetas" required></ion-input>
+              </ion-item>
+          </ion-list>
+          <ion-list-header>
+            <ion-label color="primary">Dirreción de tu tienda</ion-label>
+          </ion-list-header>
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Codigo Postal</ion-label>
+              <ion-input name="codidoPostal" type="number" [(ngModel)]="tienda.codigoPostal" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Colonia</ion-label>
+              <ion-input name="colonia" [(ngModel)]="tienda.colonia" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Calle</ion-label>
+              <ion-input name="calle" [(ngModel)]="tienda.calle" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">No. Exterior</ion-label>
+              <ion-input name="NoExterior" [(ngModel)]="tienda.NoExterior" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">No. Interior</ion-label>
+              <ion-input name="NoInterior" [(ngModel)]="tienda.NoInterior" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Municipio</ion-label>
+                <ion-input name="municipio" [(ngModel)]="tienda.municipio" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Estado</ion-label>
+                <ion-input name="estado" [(ngModel)]="tienda.estado" required></ion-input>
+              </ion-item>
+          </ion-list>
+
+            <ion-button  type="submit" expand="block" color="success">Crear mi tienda</ion-button>
+          </form>
+    </ion-card>
+</ion-content>

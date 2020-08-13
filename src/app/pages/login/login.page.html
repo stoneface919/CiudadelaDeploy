@@ -1,0 +1,45 @@
+
+<ion-content  >
+  <ion-card class="header">
+    <ion-toolbar>
+      <ion-title >Ciudadela</ion-title>
+      <ion-buttons  slot="end">
+        <ion-button color="warning" routerLink="/registro" >
+            <ion-icon slot="start" name="add"></ion-icon>
+            Crea una cuenta
+        </ion-button>
+    </ion-buttons>
+    </ion-toolbar>
+    
+  </ion-card>
+          <ion-card mode="ios" class="vertical-center">
+            <ion-img src="../../../assets/img/2.jpg"></ion-img>
+            <ion-card-content>
+              <form (ngSubmit)="login( fLogin )" #fLogin="ngForm">
+              <ion-list>
+                <ion-item>
+                  <ion-input name="email"
+                  type="email"
+                  [(ngModel)]="loginUser.email"
+                  required placeholder="Usuario"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="password"
+                  type="password"
+                  [(ngModel)]="loginUser.password"
+                  required placeholder="Contraseña"></ion-input>
+                </ion-item>
+                  <ion-button type="submit" expand="block" fill="outline">Iniciar Sesión</ion-button>
+              </ion-list>
+            </form>
+            </ion-card-content>
+          </ion-card>
+</ion-content>
+<ion-card>
+  <ion-footer class="footer ">
+  <ion-toolbar>
+    <ion-title>Footer - No Border</ion-title>
+  </ion-toolbar>
+</ion-footer>
+</ion-card>
+

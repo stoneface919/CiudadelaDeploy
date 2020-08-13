@@ -1,0 +1,7 @@
+{
+  "name": "Ciudadela",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

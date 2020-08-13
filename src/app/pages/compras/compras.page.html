@@ -1,0 +1,16 @@
+<app-header titulo="Mis Compras"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Tus Compras</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of list" routerLink="/compra">
+      <ion-thumbnail slot="start">
+        <img src="../../../../assets/img/2.jpg" />
+      </ion-thumbnail>
+      <ion-label > {{item.estado}} </ion-label>
+      <ion-label slot="end">Total: $ {{item.total}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
